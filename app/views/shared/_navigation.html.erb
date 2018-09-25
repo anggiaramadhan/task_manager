@@ -1,0 +1,30 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="<%= root_path %>">
+      <%= image_tag "task_manager_logo.png", alt: "Logo" %>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a class="button is-link is-outlined" href="<%= new_user_session_path %>">Sign In</a>
+      </div>
+      <div class="navbar-item">
+        <a href="<%= new_user_registration_path %>">Register</a>
+      </div>
+      <% if user_signed_in? %>
+        <div class="navbar-item">
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</nav>
