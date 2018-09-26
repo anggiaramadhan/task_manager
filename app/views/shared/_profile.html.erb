@@ -1,0 +1,20 @@
+<section class="columns">
+  <div class="column is-half is-offset-one-quarter">
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <%= image_tag current_user.avatar %>
+        </p>
+      </figure>
+      <div class="media-content">
+        <p>
+        <strong><%= current_user.fullname %></strong> 
+        <br>
+        <small><%= current_user.email %></small>
+        <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>

@@ -15,6 +15,9 @@
   <body>
     <div class="container">
         <%= render 'shared/navigation' %>
+        <% if user_signed_in? %>
+          <%= render 'shared/profile' %>
+        <% end %>
         <%= yield %>
     </div>
   </body>
